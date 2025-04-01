@@ -1,0 +1,273 @@
+/*For some of the coding below, I did ask ChatGPT to help assist me on the alignments with some text such as asking it to give me ways of padding it correctly and help with color coordination*/
+/*I also asked Chat GPT to assist me on the skip to main content since I was sturggling to get it off screen, and now it pops up when you click tab and goes away perfectly!*/
+/*I tried fixing one last error that is showing on wave and w3c validator but i am struggling*/
+
+/*Skip to main*/
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    height: 35px;
+    background-color: lightgray;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 2px solid black;
+}  
+
+.skip:focus {
+    top: 20px;
+    outline: 2px solid black;
+}
+
+/*Body content*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Grid*/
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+header img {
+    width: 50%;
+    max-width: 200px;
+}
+
+/*Nav links styling*/
+nav ul li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0056b3;  /* Darker color for better contrast */
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #003366;  /* Darker shade on hover for better visibility */
+    text-decoration: underline;
+}
+
+nav ul li a:focus {
+    outline: 3px solid #ffcc00;
+}
+
+/* Main Content */
+main {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: grid;
+    gap: 15px;
+}
+
+/* Articles */
+article {
+    display: grid;
+    gap: 10px;
+}
+
+/* Images */
+figure {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Lists */
+ol, ul {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 5px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Highlight color for better visibility */
+    text-decoration: underline;
+}
+
+
+/* Links */
+a {
+    color: #001a33;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #001f33;
+    text-decoration: underline;
+}
+
+/* Accessibility */
+a:focus {
+    outline: 2px solid #ffcc00;
+}
+
+/*Designing page layouts to bold the important text*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Page Titles */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Subheadings */
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/*Improving List Readability */
+ul, ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/*Designing my desktop/tablet view*/
+@media (min-width: 768px) {
+    header {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      justify-items: center;
+      background-color: #007bff;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    header img {
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+  
+    header h1 {
+      font-size: 36px;
+      color: white;
+      margin: 10px 0;
+    }
+  
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      justify-content: center;
+    }
+  
+    nav ul li {
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+    }
+  
+    nav ul li a {
+      color: #0056b3;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: #003366;
+    }
+  
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  
+    section:first-of-type {
+      grid-column: span 2;
+    }
+  
+    figure img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+  
